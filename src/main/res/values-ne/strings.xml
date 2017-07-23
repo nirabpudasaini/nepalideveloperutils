@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Nepali Developer Utils</string>
+    <string name="ndu_asar">असार</string>
+    <string name="ndu_aswin">आश्विन</string>
+    <string name="ndu_baishakh">बैशाख</string>
+    <string name="ndu_bhadau">भदौ</string>
+    <string name="ndu_chaitra">चैत्र</string>
+    <string name="ndu_falgun">फाल्गुन</string>
+    <string name="ndu_jestha">जेठ</string>
+    <string name="ndu_kartik">कार्तिक</string>
+    <string name="ndu_magh">माघ</string>
+    <string name="ndu_mansir">मंसिर</string>
+    <string name="ndu_poush">पुष</string>
+    <string name="ndu_shrawan">श्रावण</string>
+</resources>

@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Nepali Developer Utils</string>
+    <string name="ndu_baishakh">Baishakh</string>
+    <string name="ndu_jestha">Jestha</string>
+    <string name="ndu_asar">Asar</string>
+    <string name="ndu_shrawan">Shrawan</string>
+    <string name="ndu_bhadau">Bhadau</string>
+    <string name="ndu_aswin">Aswin</string>
+    <string name="ndu_kartik">Kartik</string>
+    <string name="ndu_mansir">Mansir</string>
+    <string name="ndu_poush">Poush</string>
+    <string name="ndu_magh">Magh</string>
+    <string name="ndu_falgun">Falgun</string>
+    <string name="ndu_chaitra">Chaitra</string>
+
 </resources>

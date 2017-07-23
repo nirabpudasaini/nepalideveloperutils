@@ -1,29 +1,38 @@
 package np.com.nirab.nepalideveloperutils.BSCalender;
 
+import android.content.Context;
+
 import org.joda.time.DateTime;
 import org.joda.time.Days;
 
 import java.util.Date;
 import java.util.HashMap;
 
+import np.com.nirab.nepalideveloperutils.R;
+
 public class NepaliDate {
 
     private int mYear, mMonth, mDayOfMonth, mDayofWeek, mHourOfDay, mMinute, mSecond, mMillisecond;
+    private String mMonthString;
+    private Context mContext;
 
     HashMap<Integer, int[]> daysInMonths = new HashMap<>();
 
 
-    public NepaliDate() {
+    public NepaliDate(Context c) {
+        this.mContext = c;
         DateTime date = new DateTime();
         init(date);
     }
 
-    public NepaliDate(Date date){
+    public NepaliDate(Context c, Date date){
+        this.mContext = c;
         DateTime dateTime = new DateTime(date);
         init(dateTime);
     }
 
-    public NepaliDate(int enYear, int enMonth, int enDay){
+    public NepaliDate(Context c, int enYear, int enMonth, int enDay){
+        this.mContext = c;
         DateTime date = new DateTime(enYear,enMonth,enDay,0,0);
         init(date);
 
@@ -151,12 +160,44 @@ public class NepaliDate {
         }
         this.mYear = nepaliYear;
         this.mMonth = nepaliMonth;
+        this.mMonthString = getMonthString(nepaliMonth);
         this.mDayOfMonth = nepaliDay;
         this.mDayofWeek = dayOfWeek;
         this.mHourOfDay = date.getHourOfDay();
         this.mMinute = date.getMinuteOfHour();
         this.mSecond = date.getSecondOfMinute();
         this.mMillisecond = date.getMillisOfSecond();
+    }
+
+    public String getMonthString(int month){
+        switch (month){
+            case 1:
+                return mContext.getString(R.string.ndu_baishakh);
+            case 2:
+                return mContext.getString(R.string.ndu_jestha);
+            case 3:
+                return mContext.getString(R.string.ndu_asar);
+            case 4:
+                return mContext.getString(R.string.ndu_shrawan);
+            case 5:
+                return mContext.getString(R.string.ndu_bhadau);
+            case 6:
+                return mContext.getString(R.string.ndu_aswin);
+            case 7:
+                return mContext.getString(R.string.ndu_kartik);
+            case 8:
+                return mContext.getString(R.string.ndu_mansir);
+            case 9:
+                return mContext.getString(R.string.ndu_poush);
+            case 10:
+                return mContext.getString(R.string.ndu_magh);
+            case 11:
+                return mContext.getString(R.string.ndu_falgun);
+            case 12:
+                return mContext.getString(R.string.ndu_chaitra);
+            default:
+                return "Error";
+        }
     }
 
     public int getYear() {
