@@ -3,6 +3,7 @@ package np.com.nirab.nepalideveloperutils.BSCalender;
 import android.content.Context;
 
 import org.joda.time.DateTime;
+import org.joda.time.DateTimeZone;
 import org.joda.time.Days;
 
 import java.util.Date;
@@ -37,7 +38,6 @@ public class NepaliDate {
         init(date);
 
     }
-
 
     public void init(DateTime date){
         daysInMonths.put(2000, new int[]{30, 32, 31, 32, 31, 30, 30, 30, 29, 30, 29, 31});
@@ -133,6 +133,8 @@ public class NepaliDate {
         daysInMonths.put(2090, new int[]{30, 32, 31, 32, 31, 30, 30, 30, 29, 30, 30, 30});
 
         DateTime base = new DateTime(1944,1,1,0,0);
+        date = date.withZone(DateTimeZone.forID("Asia/Kathmandu"));
+
         long daysBetween = Days.daysBetween(base,date).getDays();
 
         int nepaliYear = 2000;
