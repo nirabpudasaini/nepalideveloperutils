@@ -13,4 +13,11 @@
     <string name="ndu_mansir">मंसिर</string>
     <string name="ndu_poush">पुष</string>
     <string name="ndu_shrawan">श्रावण</string>
+    <string name="ndu_sunday">आइतबार</string>
+    <string name="ndu_monday">सोमबार</string>
+    <string name="ndu_tuesday">मंगलबार</string>
+    <string name="ndu_wednesday">बुधबार</string>
+    <string name="ndu_thrusday">बिहिबार</string>
+    <string name="ndu_friday">शुक्रबार</string>
+    <string name="ndu_saturday">शनिबार</string>
 </resources>

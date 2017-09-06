@@ -12,5 +12,12 @@
     <string name="ndu_magh">Magh</string>
     <string name="ndu_falgun">Falgun</string>
     <string name="ndu_chaitra">Chaitra</string>
+    <string name="ndu_sunday">Aaitabaar</string>
+    <string name="ndu_monday">Sombaar</string>
+    <string name="ndu_tuesday">Mangalbaar</string>
+    <string name="ndu_wednesday">Budhabaar</string>
+    <string name="ndu_thrusday">Bihibaar</string>
+    <string name="ndu_friday">Shukrabaar</string>
+    <string name="ndu_saturday">Shanibaar</string>
 
 </resources>

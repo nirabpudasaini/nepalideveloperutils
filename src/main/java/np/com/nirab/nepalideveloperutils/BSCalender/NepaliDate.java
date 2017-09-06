@@ -14,7 +14,7 @@ import np.com.nirab.nepalideveloperutils.R;
 public class NepaliDate {
 
     private int mYear, mMonth, mDayOfMonth, mDayofWeek, mHourOfDay, mMinute, mSecond, mMillisecond;
-    private String mMonthString;
+    private String mMonthString, mDayString;
     private Context mContext;
 
     HashMap<Integer, int[]> daysInMonths = new HashMap<>();
@@ -133,7 +133,6 @@ public class NepaliDate {
         daysInMonths.put(2090, new int[]{30, 32, 31, 32, 31, 30, 30, 30, 29, 30, 30, 30});
 
         DateTime base = new DateTime(1944,1,1,0,0);
-        date = date.withZone(DateTimeZone.forID("Asia/Kathmandu"));
 
         long daysBetween = Days.daysBetween(base,date).getDays();
 
@@ -165,6 +164,7 @@ public class NepaliDate {
         this.mMonthString = getMonthString(nepaliMonth);
         this.mDayOfMonth = nepaliDay;
         this.mDayofWeek = dayOfWeek;
+        this.mDayString = getDayString(dayOfWeek);
         this.mHourOfDay = date.getHourOfDay();
         this.mMinute = date.getMinuteOfHour();
         this.mSecond = date.getSecondOfMinute();
@@ -202,6 +202,29 @@ public class NepaliDate {
         }
     }
 
+    public String getDayString(int day){
+        switch (day){
+            case 1:
+                return mContext.getString(R.string.ndu_sunday);
+            case 2:
+                return mContext.getString(R.string.ndu_monday);
+            case 3:
+                return mContext.getString(R.string.ndu_tuesday);
+            case 4:
+                return mContext.getString(R.string.ndu_wednesday);
+            case 5:
+                return mContext.getString(R.string.ndu_thrusday);
+            case 6:
+                return mContext.getString(R.string.ndu_friday);
+            case 7:
+                return mContext.getString(R.string.ndu_saturday);
+            default:
+                return "Error";
+        }
+    }
+
+
+
     public int getYear() {
         return mYear;
     }
@@ -226,11 +249,11 @@ public class NepaliDate {
         this.mDayOfMonth = mDayOfMonth;
     }
 
-    public int getDayofWeek() {
+    public int getDayOfWeek() {
         return mDayofWeek;
     }
 
-    public void setDayofWeek(int mDayofWeek) {
+    public void setDayOfWeek(int mDayofWeek) {
         this.mDayofWeek = mDayofWeek;
     }
 
@@ -265,5 +288,7 @@ public class NepaliDate {
     public void setMillisecond(int mMillisecond) {
         this.mMillisecond = mMillisecond;
     }
+
+
 
 }
